@@ -27,33 +27,34 @@ $purple-light: #D4ADD9;
     max-width: 356px;
     border-radius: 39px;
     padding: 40px;
-    .aside__check-box {
+    &__check-box {
        position: relative; 
        padding-bottom: 80px;
     }    
-    .aside__img_sun {
+    &__img_sun {
         position: absolute;
         top: -25px;
         left: -25px;
     }
-    .navigation {
+}
+.navigation {
         gap: 50px;
-        .navigation__link {
-            display: flex;
-            align-items: center;
+    &__link {
+        display: flex;
+        align-items: center;
+    }
+    &__link_active {
+        background-color: rgba(212, 173, 217, 1);
+        border-top-right-radius: 39px;
+        border-bottom-right-radius: 39px;
         }
-        .navigation__link_active {
-            background-color: rgba(212, 173, 217, 1);
-            border-top-right-radius: 39px;
-            border-bottom-right-radius: 39px;
-        }
-        .navigation__name{
-            @include font-set (400, 30px, 36px)
-        }
+    &__name{
+        @include font-set (400, 30px, 36px)
     }
 }
 
-.page-wrap {
+
+.section-wrap {
     background-color: $purple-light;
     color: rgba(57, 6, 70, 1);
     border-radius: 39px;
@@ -65,24 +66,26 @@ $purple-light: #D4ADD9;
     padding: 12px;
     justify-content: space-between;
     min-width: 1048px;
-    .cash {
-        align-items: center;
-        .cash__number {
-            @include font-set (800, 60px, 72px);
-        }
-        .cash__text {
-            @include font-set (800, 20px, 24px);
-            color: rgba(255, 255, 255, 1);
-        }
+}
+.cash {
+    align-items: center;
+    &__number {
+        @include font-set (800, 60px, 72px);
     }
-    .header__wallet {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        padding-left: 100px;
-        .wallet__text {
-            @include font-set (800, 50px, 60px);
-        }
+    &__text {
+        @include font-set (800, 20px, 24px);
+        color: rgba(255, 255, 255, 1);
+    }
+}
+.header__wallet {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 100px;
+}
+.wallet {
+    &__text {
+        @include font-set (800, 50px, 60px);
     }
 }
 
@@ -94,33 +97,24 @@ $purple-light: #D4ADD9;
     padding: 37px 55px 67px 64px;
     flex-grow: 1;
     max-width: 1048px;
-    .main__img {
-        &:first-child {
-            padding-left: 0;
-        }
-        padding-right: 55px;
-        &:last-child {
-            padding-right: 0;
-        }
-    }
 }
 
 .footer {
     display: flex;
     justify-content: space-between;
-    .footer__diagram{
+    &__diagram{
         min-width: 370px;
         padding: 15px;  
     }
-    .footer__graphic {
+    &__graphic {
         min-width: 630px;
         padding: 15px;
     }
-    .footer__img {
+    &__img {
         display: block;
         margin: 0 auto;
     }
-    .footer__img_circle {
+    &__img_circle {
         border: 20px solid $purple;
         padding: 7px;
         border-radius: 50%;
